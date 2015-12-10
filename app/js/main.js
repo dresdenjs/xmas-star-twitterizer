@@ -83,13 +83,24 @@ var _init = function() {
 
 module.exports = function(ddjs) {
   ddjs.init = _init;
-  ddjs.redraw = _redraw;
-  ddjs.pointFunction = _pointFn;
-  ddjs.calculateStarPoints = calculateStarPoints;
 
   //short-cuts for uber code...
-  ddjs.rd = ddjs.redraw;
-  ddjs.pFn = ddjs.pointFunction;
-  ddjs.cSPns = ddjs.calculateStarPoints;
+  ddjs.rd = _redraw;
+  ddjs.pFn = _pointFn;
+  ddjs.cSPns = calculateStarPoints;
+
+  ddjs.redraw = function () {
+    ddjs.rd();
+  };
+
+  ddjs.pointFunction = function () {
+    return ddjs.pFn.apply(this, arguments)
+  };
+
+  ddjs.calculateStarPoints = function () {
+    return ddjs.cSPns.apply(this, arguments)
+  }
+
+
 
 };
