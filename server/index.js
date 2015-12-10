@@ -8,6 +8,7 @@ var tw = new Twitter({
   token_secret: process.env.TWITTER_TOKEN_SECRET
 });
 
+//setup twitter
 tw.on('tweet', function(tweet){
   console.log('Tweet', tweet);
   console.log('Someone tweeted about ddjs-stars...');
@@ -16,6 +17,11 @@ tw.on('tweet', function(tweet){
 
 tw.on('error', function(error) {
   console.log('There was an error:', error);
+});
+
+//some message for socket.io
+io.on('connection', function(socket) {
+  console.log('Client connected...')
 });
 
 console.log('Tracking ddjsxmas with token', process.env.TWITTER_TOKEN);

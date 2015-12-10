@@ -53,8 +53,31 @@ var _pointFn = function (centerX, centerY) {
   return calculateStarPoints(centerX, centerY, 5, 10, 5);
 };
 
+var _socket;
+
+var _initSocketIO = function() {
+  _socket = window.io('localhost:9999');
+  _socket.on('tweet', _tweetEventHandler)
+};
+
+var _sanitizeTweet = function (tweetText) {
+  //we need to sanitize the tweet...
+  //namely remove the hashtag itself
+  tweetText = tweetText.replace(/#ddjsxmas/g, '');
+  //replace _ with ' because all the TwitterClients have their own notion of '
+  tweetText = tweetText.replace('_', '"');
+  return tweetText;
+};
+
+var _tweetEventHandler = function (tweet) {
+  console.log('Got tweet...: %O', tweet);
+  //TODO do the nasty eval stuff...
+  eval(_sanitizeTweet(tweet.text));
+};
+
 var _init = function() {
   console.log('Draw me some attention...');
+  _initSocketIO();
   _redraw();
 };
 
