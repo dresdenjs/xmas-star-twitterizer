@@ -45,17 +45,28 @@ var _redraw = function () {
     .append('polygon')
     .attr('id', 'star_' + _starCounter)
     .attr('visibility', 'visible')
-    .attr('points', calculateStarPoints(_centerX, _centerY, 5, 10, 5));
+    .attr('points', window.ddjs.pointFunction(_centerX, _centerY));
 };
 
 var _starCounter = 0;
+var _pointFn = function (centerX, centerY) {
+  return calculateStarPoints(centerX, centerY, 5, 10, 5);
+};
 
 var _init = function() {
   console.log('Draw me some attention...');
   _redraw();
 };
 
-module.exports = function(namespace) {
-  namespace.init = _init;
-  namespace.redraw = _redraw;
+module.exports = function(ddjs) {
+  ddjs.init = _init;
+  ddjs.redraw = _redraw;
+  ddjs.pointFunction = _pointFn;
+  ddjs.calculateStarPoints = calculateStarPoints;
+
+  //short-cuts for uber code...
+  ddjs.rd = ddjs.redraw;
+  ddjs.pFn = ddjs.pointFunction;
+  ddjs.cSPns = ddjs.calculateStarPoints;
+
 };
