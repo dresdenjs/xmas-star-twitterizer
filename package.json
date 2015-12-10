@@ -1,12 +1,12 @@
 {
   "name": "xmas_star_twitterizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Drawing stars, by tweeting ev0l JS code on Twitter.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node node_modules/.bin/webpack-dev-server --content-base app",
-    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html"
+    "build": "export NODE_ENV=production && node node_modules/.bin/webpack && cp app/index.html dist/index.html && cp -r app/style dist/style"
   },
   "keywords": [
     "star",

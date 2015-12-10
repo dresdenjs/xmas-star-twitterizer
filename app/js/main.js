@@ -81,6 +81,11 @@ var _init = function() {
   _redraw();
 };
 
+var _test = function () {
+  //who needs jQuery anyway?
+  _tweetEventHandler({text:document.getElementById('test').value});
+};
+
 module.exports = function(ddjs) {
   ddjs.init = _init;
 
@@ -88,6 +93,7 @@ module.exports = function(ddjs) {
   ddjs.rd = _redraw;
   ddjs.pFn = _pointFn;
   ddjs.cSPns = calculateStarPoints;
+  ddjs.test = _test;
 
   ddjs.redraw = function () {
     ddjs.rd();

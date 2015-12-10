@@ -7,12 +7,13 @@ var config = {
     path: __dirname + '/app',
     filename: 'bundle.js'
   },
+  plugins : [],
 
-  plugins: [
+  /*plugins: [
     new webpack.DefinePlugin({
       ON_TEST: process.env.NODE_ENV === 'test'
     })
-  ],
+  ],*/
 
   module: {
     loaders: [
