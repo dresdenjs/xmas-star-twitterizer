@@ -1,6 +1,6 @@
 {
   "name": "xmas_star_twitterizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Drawing stars, by tweeting ev0l JS code on Twitter.",
   "main": "index.js",
   "scripts": {
