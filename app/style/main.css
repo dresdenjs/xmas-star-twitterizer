@@ -1,0 +1,93 @@
+* {
+  outline: none;
+}
+
+body, button {
+  font-family: "Muli", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-size: 0;
+  line-height: 1.5;
+}
+
+h2, textarea, button {
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+textarea, button {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  background: none;
+  border-radius: 3px;
+}
+
+textarea, pre {
+  font-size: 15px;
+  font-family: monospace;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  background: #444;
+  color: #46ca3b;
+  resize: vertical;
+}
+textarea::-webkit-input-placeholder {
+  color: #f1f1f1;
+  opacity: .5;
+}
+textarea:-moz-placeholder {
+  color: #f1f1f1;
+  opacity: .5;
+}
+textarea::-moz-placeholder {
+  color: #f1f1f1;
+  opacity: .5;
+}
+textarea:-ms-input-placeholder {
+  color: #f1f1f1;
+  opacity: .5;
+}
+
+
+button {
+  margin-right: 10px;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #444;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+button:hover {
+  background: #ccc;
+}
+button + button {
+  margin-right: 0;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+section:first-of-type {
+  margin-top: 20px;
+}
+
+section.playground {
+  flex-direction: row;
+}

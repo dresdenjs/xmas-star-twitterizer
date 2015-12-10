@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>DresdenJS X-Mas Twitterizer</title>
+  <meta charset="UTF-8">
+  <title>DresdenJS X-Mas Twitterizer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,300" type="text/css" class="font">
   <link rel="stylesheet" href="style/main.css" class="rel">
   <script src="bundle.js"></script>
 </head>
 <body onload="ddjs.init()">
-<svg id="canvas" width="200" height="200">
 
-</svg>
-<button onclick="ddjs.redraw()">Redraw!</button>
-Last christmas tweet:
-<div id="preview">
+<section class="preview">
+  <svg id="canvas" width="200" height="200">
 
-</div>
-Playground:
-<form>
-  <textarea id="test" name="testing">
+  </svg>
+</section>
 
-  </textarea>
-</form>
-<button onclick="ddjs.test()">Test!</button>
+<section class="tweets">
+  <h2>Last christmas tweet:</h2>
+  <pre id="preview"></pre>
+</section>
+<section class="playground">
+  <h2>Playground:</h2>
+  <form>
+    <textarea id="test" name="testing" placeholder="enter your script here"></textarea>
+
+    <button type="button" onclick="ddjs.test()">Test!</button>
+    <button type="button" onclick="ddjs.redraw()">Redraw!</button>
+  </form>
+</section>
 </body>
 </html>
