@@ -22,10 +22,10 @@
 </section>
 <section class="playground">
   <h2>Playground:</h2>
-  <form onsubmit="ddjs.test(); return false">
+  <form>
     <textarea id="test" name="testing" placeholder="enter your script here"></textarea>
 
-    <button type="submit">Test!</button>
+    <button type="button" onclick="ddjs.test()">Test!</button>
     <button type="button" onclick="ddjs.redraw()">Redraw!</button>
   </form>
 </section>
