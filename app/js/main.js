@@ -65,7 +65,7 @@ var _sanitizeTweet = function (tweetText) {
   //namely remove the hashtag itself
   tweetText = tweetText.replace(/#ddjsxmas/g, '');
   //replace _ with ' because all the TwitterClients have their own notion of '
-  tweetText = tweetText.replace('_', '"');
+  tweetText = tweetText.replace(/_/g, '"');
   return tweetText;
 };
 
