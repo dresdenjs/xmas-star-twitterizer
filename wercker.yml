@@ -1,0 +1,24 @@
+# wercker.yml
+box: node
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    - script:
+        name: Building app...
+        code: npm build
+
+deploy:
+  steps:
+    - zalari/gh-pages:
+        token: $GITHUB_TOKEN
+        repo: dresdenjs/xmas-star-twitterizer
+        path: dist
+
+  # Report the build status to HipChat
+  #after-steps:
+  #  - hipchat-notify:
+  #    token: **YOUR HIPCHAT TOKEN***
+  #      room-id: **YOUR HIPCHAT ROOM ID**
