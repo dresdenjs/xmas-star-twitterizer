@@ -1,0 +1,23 @@
+{
+  "name": "xmas_star_twitterizer",
+  "version": "0.1.0",
+  "description": "Drawing stars, by tweeting ev0l JS code on Twitter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base app",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp app/index.html dist/index.html"
+  },
+  "keywords": [
+    "star",
+    "twitter",
+    "dresdenjs",
+    "example"
+  ],
+  "author": "Christian Ulbrich <christian.ulbrich@zalari.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
