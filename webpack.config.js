@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 var config = {
   context: __dirname + '/app',
-  entry: './index.js',
+  entry: './modules.js',
   output: {
     path: __dirname + '/app',
     filename: 'bundle.js'
@@ -16,10 +16,8 @@ var config = {
 
   module: {
     loaders: [
-      {test: /\.js$/, loader: 'ng-annotate!babel', exclude: /node_modules/},
-      {test: /\.html$/, loader: 'raw', exclude: /node_modules/},
-      {test: /\.css$/, loader: 'style!css', exclude: /node_modules/},
-      {test: /\.styl$/, loader: 'style!css!stylus', exclude: /node_modules/}
+      {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
+      {test: /\.html$/, loader: 'raw', exclude: /node_modules/}
     ]
   }
 };

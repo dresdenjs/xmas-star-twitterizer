@@ -17,7 +17,17 @@
   "author": "Christian Ulbrich <christian.ulbrich@zalari.de>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "raw-loader": "^0.5.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "d3": "^3.5.10",
+    "lodash": "^3.10.1",
+    "node-tweet-stream": "^1.8.3",
+    "socket.io": "^1.3.7",
+    "socket.io-client": "^1.3.7"
   }
 }
