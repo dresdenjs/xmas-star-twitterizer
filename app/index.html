@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,300" type="text/css" class="font">
   <link rel="stylesheet" href="style/main.css" class="rel">
   <script src="bundle.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body onload="ddjs.init()">
 
@@ -19,10 +22,10 @@
 </section>
 <section class="playground">
   <h2>Playground:</h2>
-  <form>
+  <form onsubmit="ddjs.test(); return false">
     <textarea id="test" name="testing" placeholder="enter your script here"></textarea>
 
-    <button type="button" onclick="ddjs.test()">Test!</button>
+    <button type="submit">Test!</button>
     <button type="button" onclick="ddjs.redraw()">Redraw!</button>
   </form>
 </section>

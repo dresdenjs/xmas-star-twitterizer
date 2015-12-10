@@ -16,6 +16,10 @@ body {
   line-height: 1.5;
 }
 
+svg {
+  width: 100%;
+}
+
 h2, textarea, button {
   margin: 0 0 10px;
 }
@@ -82,10 +86,11 @@ button + button {
 section {
   max-width: 980px;
   margin: 0 auto 20px;
+  padding: 0 10px;
 }
 
 section:first-of-type {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 section.playground {
